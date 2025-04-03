@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="music-container">
+    
+    <div class="now-playing">
+      <img id="albumArt" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" alt="Album Cover">
+      <div class="song-details">
+        <p id="songTitle">Song Name</p>
+        <p id="artistName">Artist</p>
+      </div>
+      <button id="playPause" onclick="togglePlay()">▶</button>
+    </div>
+
+    <div class="playlist">
+      <h3>Playlist</h3>
+      <ul>
+        <li onclick="playSong(0)">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmSEeQ01YsSEZQIG5Tffe0rYmoxxqKOFKXg&s" alt="Song">
+          <div class="song-info">
+            <span>PUDHU VELLAI MALAI</span>
+            <small>A.R.Rahman, Sujatha Mohan</small>
+          </div>
+        </li>
+        <li onclick="playSong(1)">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsQhVVCQrDLNOBPFuRKmcwew-C8D2OBCnIJw&s" alt="Song">
+          <div class="song-info">
+            <span>SAWADEEKA</span>
+            <small>Anthony Daasan</small>
+          </div>
+        </li>
+        <li onclick="playSong(2)">
+          <img src="https://m.sakshipost.com/sites/default/files/styles/storypage_main/public/gallery_images/2024/12/6/Amaran%20Movie%20HD%20Images_%20%2819%29-1729573602.jpg?itok=oxEHtDqW" alt="Song">
+          <div class="song-info">
+            <span>VENNILAVU SARAL NEE</span>
+            <small>Kapil Kapilan, Rakshita Suresh, G V Prakash</small>
+          </div>
+        </li>
+        <li onclick="playSong(3)">
+          <img src="https://i.ytimg.com/vi/zwIpvea4_9A/maxresdefault.jpg" alt="Song">
+          <div class="song-info">
+            <span>KANNANA KANNE</span>
+            <small>Sean Roldan, Anirudh Ravichander</small>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bottom-bar">
+      <button onclick="prevSong()">⏮</button>
+      <button id="playPauseBottom" onclick="togglePlay()">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="mp3.js"></script>
+
+</body>
+</html>
